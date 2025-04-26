@@ -1,26 +1,39 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wallet Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BitPay Wallet Demo</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico">
 </head>
 <body>
-  <header>
-    <img src="assets/logo.png" alt="Wallet Logo" class="logo">
+  <header class="header">
+    <img src="logo.png" alt="BitPay Logo" class="logo">
   </header>
-  <main>
-    <h1>Mi Wallet</h1>
-    <div class="wallet-card">
-      <p>Saldo disponible:</p>
-      <h2>0 BPY</h2>
-      <button>Enviar</button>
-      <button>Recibir</button>
-    </div>
+
+  <main class="main">
+    <section class="balance-card">
+      <h2>Saldo disponible</h2>
+      <p class="balance">450,000 BPY</p>
+      <p class="balance-usd">≈ $12,500 USD</p>
+    </section>
+
+    <section class="actions">
+      <button class="btn send">Enviar</button>
+      <button class="btn receive">Recibir</button>
+    </section>
+
+    <section class="transactions">
+      <h3>Últimos movimientos</h3>
+      <ul>
+        <li>+ 500 BPY recibido - Juan</li>
+        <li>- 200 BPY enviado - María</li>
+        <li>+ 1000 BPY recibido - Exchange</li>
+      </ul>
+    </section>
   </main>
-  <script src="app.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
