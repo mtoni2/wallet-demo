@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BitPay Wallet Demo</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Demo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <img src="logo.png" alt="BitPay Logo" class="logo">
-  </header>
+    <header>
+        <h1>Hola, Marcelo</h1>
+    </header>
 
-  <main class="main">
-    <section class="balance-card">
-      <h2>Saldo disponible</h2>
-      <p class="balance">450,000 BPY</p>
-      <p class="balance-usd">≈ $12,500 USD</p>
+    <section class="balance">
+        <p>Saldo disponible</p>
+        <h2 id="saldo">$ 25,300</h2>
+        <button onclick="toggleSaldo()">👁️ Mostrar/Ocultar</button>
     </section>
 
     <section class="actions">
-      <button class="btn send">Enviar</button>
-      <button class="btn receive">Recibir</button>
+        <div class="action">Agregar dinero</div>
+        <div class="action">Transferir</div>
+        <div class="action">Pagar servicios</div>
+        <div class="action">Cobrar</div>
     </section>
 
-    <section class="transactions">
-      <h3>Últimos movimientos</h3>
-      <ul>
-        <li>+ 500 BPY recibido - Juan</li>
-        <li>- 200 BPY enviado - María</li>
-        <li>+ 1000 BPY recibido - Exchange</li>
-      </ul>
+    <section class="banner">
+        <p>Promociones especiales para vos</p>
     </section>
-  </main>
+
+    <nav class="bottom-nav">
+        <div class="nav-item">Inicio</div>
+        <div class="nav-item">Cuentas</div>
+        <div class="nav-item">QR</div>
+        <div class="nav-item">Tarjetas</div>
+        <div class="nav-item">Más</div>
+    </nav>
+
+    <script>
+        let saldoVisible = true;
+        function toggleSaldo() {
+            const saldo = document.getElementById('saldo');
+            if (saldoVisible) {
+                saldo.textContent = "$ *****";
+            } else {
+                saldo.textContent = "$ 25,300";
+            }
+            saldoVisible = !saldoVisible;
+        }
+    </script>
+</body>
+</html>
 
   <script src="script.js"></script>
 </body>
